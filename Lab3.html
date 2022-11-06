@@ -1,0 +1,30 @@
+<html>
+    <style>
+        #parent{
+            width:200px;
+            border:2px solid black;
+            height: 300px;
+        }
+        </style>
+    <body>
+    <h1>Event Bubbling</h1>
+    <div id="parent">
+        parent
+        <button id="child">
+            <h1>child</h1>
+        </button>
+    </div>
+    
+    <script>
+        document.getElementById(
+"child").addEventListener("click", function () {
+        window.alert("You clicked the Child element!");
+    },false);
+
+    document.getElementById(
+"parent").addEventListener("click", function () {
+        window.alert("You clicked the parent element!");
+    },true);
+    </script>
+    </body>
+</html>
